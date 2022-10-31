@@ -1,0 +1,253 @@
+html{overflow: hidden;}
+ 
+html, body{width: 100%; height: 100%;}
+ 
+.content{
+	width: 100%; height: 100%;
+	background-color: #fcfcfc;
+	
+	position: relative;
+}
+body {
+    padding-top: 150px;
+    background-color: #eff2f8;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+.content > h1{
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%,-50%);
+ 
+	font-size: 20em;
+	font-weight: bold;
+	text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+ 
+}
+
+
+
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 45px 60px;
+    background-color: white;
+    color: #6a75ca;
+    font-size: 18px;
+    /* border-bottom: 1px solid #e0e3fd; */
+    z-index: 10;
+  }
+  .nav-list {
+    display: flex;
+    justify-content: right;
+    
+  }
+  .list-link {
+    margin-left: 70px;
+    text-decoration: none;
+  }
+  .list-link:hover {
+    color: black;
+    border-bottom: 2px solid black;
+  }
+  .btn-code {
+    padding: 8px 23px;
+    border-radius: 20px;
+    background-color: #6a75ca;
+    border: solid 2px #6a75ca;
+    color: white;
+  }
+  .btn-code:hover {
+    background-color: white;
+    border: solid 2px #6a75ca;
+    color: #6a75ca;
+    transition: 0.2s ease-out;
+  }
+  .bar-bg {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #dfe2f7;
+  }
+  .bar-ing {
+    position: absolute;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #6a75ca;
+  }
+
+  /*header*/
+
+  /*sec1*/
+  #sec1 {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .txt-title {
+    width: 620px;
+    margin-top: 30px;
+    font-size: 55px;
+    font-family: "GmarketBold";
+    color: #6a75ca;
+    line-height: 58px;
+    
+  }
+  .btn-more {
+    position: relative;
+    padding: 8px 27px;
+    border-radius: 20px;
+    background-color: #6a75ca;
+    border: solid 2px #6a75ca;
+    color: white;
+    font-size: 18px;
+    left: 800px;
+    right: 300px;
+    top: -100px;
+    text-decoration: none;
+  }
+
+  /*sec2*/
+
+
+.zt-span6-last{
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-10%);
+}
+
+
+  .zt-skill-bar {
+    width: 1200px;
+
+    color: gray;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+    background-color: rgba(0,0,0,0.1);
+
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+            border-radius: 2px;
+
+}
+
+.zt-skill-bar * {
+    -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+       -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+           transition: all 0.5s ease;
+}
+
+.zt-skill-bar div {
+    background-color: #ffc600;
+    position: relative;
+    padding-left: 20px;
+    width: 0;
+    float: left;
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+       -ms-border-radius: 2px;
+            border-radius: 2px;
+}
+
+.zt-skill-bar span {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding: 0 5px 0 10px;
+    background-color: #1a1a1a;
+
+    -webkit-border-radius: 0 2px 2px 0;
+       -moz-border-radius: 0 2px 2px 0;
+        -ms-border-radius: 0 2px 2px 0;
+            border-radius: 0 2px 2px 0;
+}
+
+.zt-skill-bar span:before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    left: -3px;
+    margin-top: -3px;
+    background-color: #1a1a1a;
+
+
+    
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+/*sec3*/
+
+
+/*sec4*/
+
+
+#sec4{
+    background-color: #bfe7f1;
+}
+
+
+.flip { 
+  width: 200px;
+  height: 250px;
+  position: relative; 
+  perspective: 1100px;
+  margin: 2rem;
+}
+
+.card {
+  width: 100%; 
+  height: 100%; 
+  position: relative;
+  transition: .4s;
+  transform-style: preserve-3d;
+  float: left;
+} 
+
+.front, .back {
+  position: absolute;
+  width: 100%; 
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.front {
+  background: tomato; 
+}
+
+.back { 
+  background: royalblue; 
+  transform: rotateY(180deg);
+}
+
+.flip:hover .card {
+  transform: rotateY(180deg);
+}
