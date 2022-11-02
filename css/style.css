@@ -129,7 +129,9 @@ body {
   transform: translate(-50%,-10%);
 }
 
-
+.zt-span6-last > h3{
+  padding: 20px;
+}
   .zt-skill-bar {
     width: 1200px;
 
@@ -208,46 +210,63 @@ body {
 
 #sec4{
     background-color: #bfe7f1;
+    text-align: center;
 }
 
 
-.flip { 
-  width: 200px;
-  height: 250px;
-  position: relative; 
-  perspective: 1100px;
-  margin: 2rem;
-}
-
-.card {
-  width: 100%; 
-  height: 100%; 
-  position: relative;
-  transition: .4s;
-  transform-style: preserve-3d;
+section {
+  width: 500px;
+  height: 1200px;
   float: left;
-} 
 
-.front, .back {
+  position: relative;
+  perspective: 600px; /* 원근감 느낌을 줄 수 있음*/
+  top: 20%;
+  left: 20%;
+  
+ }
+ .card {
+ 
   position: absolute;
-  width: 100%; 
-  height: 100%;
-  backface-visibility: hidden;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  height:1200px;
+  width: 500px;
+  transition: 1s;
+  transform-style: preserve-3d; /*3차원 공간이 만들어져야 호버했을 떄 뒤의
+  이미지를 보이게 할 수 있다*/
+ 
+ }
+ .card:hover {
+  transform: translate(-50%,-50%) rotateY(180deg); /*호버했을 떄 카드 자체
+ 를 돌려준다.*/
+ }
+ .card > div {
+  height:100%;
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  color: #fff;
+
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  top:0;
+  backface-visibility: hidden; /*뒤집혔을떄의 각자의 기존 뒷면이 안보이도록
+ 처리*/
+ }
+ .card .front {
+  float: left;
+  background: beige;
+  z-index: 9999;
+ }
+ .card .back {
+  background: orange;
+  transform:rotateY(180deg); /* 기본 셋팅으로 돌려놔야 한다.*/
 }
 
-.front {
-  background: tomato; 
-}
-
-.back { 
-  background: royalblue; 
-  transform: rotateY(180deg);
-}
-
-.flip:hover .card {
-  transform: rotateY(180deg);
+#image1{
+  width: 500px;
+  height: 300px;
+  background-color: red;
 }
